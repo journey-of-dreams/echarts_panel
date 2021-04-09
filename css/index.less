@@ -15,13 +15,13 @@ li {
 
 body {
   min-width: 1024px;
-  background: url('../images/bg.jpg') no-repeat top center;
+  background: url('../images/bg.jpg');
   line-height: 1.15;
 }
 
 header {
   height: 1.25rem;
-  background: url('../images/head_bg.png') no-repeat top center;
+  background: url('../images/head_bg.png') center;
   position: relative;
 
   h1 {
@@ -54,6 +54,7 @@ header {
     .panel {
       position: relative;
       height: 3.875rem;
+      width: 100%;
       border: rgba(25, 186, 139, 0.17);
       background: url('../images/line\(1\).png') rgba(255, 255, 255, 0.03);
       padding: 0 0.1875rem 0.5rem;
@@ -120,6 +121,12 @@ header {
       color: #fff;
       font-size: 0.25rem;
       font-weight: 400;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.125rem;
+      }
     }
 
     .chart {
@@ -132,6 +139,7 @@ header {
   .column:nth-child(2) {
     flex: 5;
     margin: 0 0.125rem 0.1875rem;
+    // overflow: hidden;
 
     .no {
       background-color: rgba(101, 132, 226, 0.1);
@@ -221,7 +229,8 @@ header {
         background-size: 100% 100%;
         opacity: 0.3;
       }
-      .map2{
+
+      .map2 {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -233,7 +242,8 @@ header {
         animation: rotate1 15s linear infinite;
         opacity: 0.6;
       }
-      .map3{
+
+      .map3 {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -245,7 +255,8 @@ header {
         animation: rotate2 10s linear infinite;
         opacity: 0.6;
       }
-      .chart{
+
+      .chart {
         position: absolute;
         top: 0;
         left: 0;
@@ -255,20 +266,36 @@ header {
       }
     }
   }
+
   @keyframes rotate2 {
-    form{
+    form {
       transform: translate(-50%, -50%) rotate(0deg);
     }
-    to{
+
+    to {
       transform: translate(-50%, -50%) rotate(-360deg);
     }
   }
+
   @keyframes rotate1 {
-    form{
+    form {
       transform: translate(-50%, -50%) rotate(0deg);
     }
-    to{
+
+    to {
       transform: translate(-50%, -50%) rotate(360deg);
     }
+  }
+}
+
+@media screen and (max-width:1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+
+@media screen and (min-width:1920px) {
+  html {
+    font-size: 88px !important;
   }
 }
